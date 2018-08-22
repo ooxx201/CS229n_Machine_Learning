@@ -1,0 +1,17 @@
+spam_data
+.cache
+.ipynb_checkpoints
+__pycache__
+
+lele*
+
+
+Problem-set-4/1-Neural-networks-MNIST-image-classification/images_test.csv
+Problem-set-4/1-Neural-networks-MNIST-image-classification/images_train.csv
+Problem-set-4/1-Neural-networks-MNIST-image-classification/labels_test.csv
+Problem-set-4/1-Neural-networks-MNIST-image-classification/labels_train.csv
+Problem-set-4/1-Neural-networks-MNIST-image-classification/mnist.zip
+Problem-set-4/1-Neural-networks-MNIST-image-classification/params_no_regularization.pkl
+Problem-set-4/1-Neural-networks-MNIST-image-classification/params_with_regularization.pkl
+
+Problem-set-4/4-Independent-components-analysis/mix.dat
