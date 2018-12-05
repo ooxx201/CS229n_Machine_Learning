@@ -35,7 +35,7 @@ def svm_train(matrix, category):
     outer_loops = 40
 
     alpha_avg
-    for ii in xrange(outer_loops * M):
+    for ii in range(outer_loops * M):
         i = int(np.random.rand() * M)
         margin = Y[i] * np.dot(K[i, :], alpha)
         grad = M * L * K[:, i] * alpha[i]
@@ -71,7 +71,7 @@ def svm_test(matrix, state):
 
 def evaluate(output, label):
     error = (output != label).sum() * 1. / len(output)
-    print 'Error: %1.4f' % error
+    print('Error: %1.4f' % error)
 
 def main():
     trainMatrix, tokenlist, trainCategory = readMatrix('MATRIX.TRAIN.400')
