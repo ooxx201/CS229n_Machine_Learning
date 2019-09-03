@@ -87,8 +87,9 @@ def one_hot_labels(labels):
     return one_hot_labels
 
 def main():
+    data_dir = 'C:\\Users\qxu\Study\data\mnist\\'
     np.random.seed(100)
-    trainData, trainLabels = readData('images_train.csv', 'labels_train.csv')
+    trainData, trainLabels = readData(data_dir + 'images_train.csv', data_dir + 'labels_train.csv')
     trainLabels = one_hot_labels(trainLabels)
     p = np.random.permutation(60000)
     trainData = trainData[p,:]
@@ -104,7 +105,7 @@ def main():
     trainData = (trainData - mean) / std
     devData = (devData - mean) / std
 
-    testData, testLabels = readData('images_test.csv', 'labels_test.csv')
+    testData, testLabels = readData(data_dir + 'images_test.csv',data_dir + 'labels_test.csv')
     testLabels = one_hot_labels(testLabels)
     testData = (testData - mean) / std
 	
@@ -114,7 +115,7 @@ def main():
     readyForTesting = False
     if readyForTesting:
         accuracy = nn_test(testData, testLabels, params)
-	print 'Test accuracy: %f' % accuracy
+    print('Test accuracy: %f' % accuracy)
 
 if __name__ == '__main__':
     main()
